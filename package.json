@@ -1,0 +1,30 @@
+{
+  "name": "word-wrappr",
+  "version": "1.0.0",
+  "description": "Wraps text according to its rendered width",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha test/test_wrappr.js"
+  },
+  "keywords": [
+    "word",
+    "wrap",
+    "font"
+  ],
+  "author": "Shane Carr",
+  "license": "MIT",
+  "dependencies": {
+    "async": "^2.0.1",
+    "command-line-args": "^3.0.1",
+    "command-line-usage": "^3.0.3",
+    "dejavu-fonts-ttf": "git://github.com/vote539/dejavu-fonts-ttf.git",
+    "opentype.js": "^0.6.4"
+  },
+  "devDependencies": {
+    "expect.js": "^0.3.1",
+    "mocha": "^3.0.2"
+  },
+  "bin": {
+    "wrappr": "bin/cli.js"
+  }
+}
