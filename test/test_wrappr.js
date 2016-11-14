@@ -1,6 +1,7 @@
 "use strict";
 
 const expect = require("expect.js");
+const fs = require("fs");
 
 const WordWrappr = require("..");
 
@@ -95,6 +96,16 @@ describe("WordWrappr", function() {
 				done(null);
 			});
 		});
+		it("should load from buffer without errors", function(done) {
+			var wrappr = new WordWrappr();
+			fs.readFile(WordWrappr.getDejaVuPath("DejaVuSerif", "Bold"), (err, buf) => {
+				if (err) return done(err);
+				var wrappr = new WordWrappr(buf);
+				wrappr.load((err) => {
+					done(err);
+				});
+			});
+		})
 	});
 
 	// Synchronous load function
