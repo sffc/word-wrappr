@@ -1,3 +1,5 @@
+/* eslint-env mocha */
+
 "use strict";
 
 const expect = require("expect.js");
@@ -97,7 +99,6 @@ describe("WordWrappr", function() {
 			});
 		});
 		it("should load from buffer without errors", function(done) {
-			var wrappr = new WordWrappr();
 			fs.readFile(WordWrappr.getDejaVuPath("DejaVuSerif", "Bold"), (err, buf) => {
 				if (err) return done(err);
 				var wrappr = new WordWrappr(buf);
@@ -105,7 +106,7 @@ describe("WordWrappr", function() {
 					done(err);
 				});
 			});
-		})
+		});
 	});
 
 	// Synchronous load function

@@ -1,3 +1,6 @@
+// Example file: console OK
+/* eslint-disable no-console */
+
 const WordWrappr = require(".");
 
 var wrappr = new WordWrappr();

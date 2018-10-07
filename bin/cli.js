@@ -31,7 +31,7 @@ const sections = [
 		header: "Options",
 		optionList: optionDefinitions
 	}
-]
+];
 const usage = getUsage(sections);
 
 if (options.help) {
@@ -65,8 +65,10 @@ async.auto({
 		var wrappr = results.load;
 		var lines = wrappr.wrap(text, options["font-size"], options["width"]);
 		process.stdout.write(lines.join("\n"));
+		next(null);
 	}]
 }, (err) => {
-	console.error(err);
+	// CLI file: console OK.
+	console.error(err); // eslint-disable-line no-console
 	process.exit(err ? 1 : 0);
 });
