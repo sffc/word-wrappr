@@ -3,6 +3,10 @@ Word Wrappr
 
 A library that wraps text according to the rendered font width rather than the number of characters.  Uses [opentype.js](https://github.com/nodebox/opentype.js) for computing text widths and [DejaVu Sans](http://dejavu-fonts.org/wiki/Main_Page) as the default reference font.  There is a Node.js API as well as a command-line interface.
 
+[![Build Status](https://travis-ci.org/sffc/word-wrappr.svg?branch=master)](https://travis-ci.org/sffc/word-wrappr)
+[![Known Vulnerabilities](https://snyk.io/test/github/sffc/word-wrappr/badge.svg)](https://snyk.io/test/github/sffc/word-wrappr)
+
+
 ## Installation
 
 For use in your application:
