@@ -17,7 +17,7 @@
   "dependencies": {
     "async": "^2.0.1",
     "command-line-args": "^3.0.1",
-    "command-line-usage": "^3.0.3",
+    "command-line-usage": "^4.0.0",
     "dejavu-fonts-ttf": "git://github.com/vote539/dejavu-fonts-ttf.git",
     "opentype.js": "^0.6.4"
   },
