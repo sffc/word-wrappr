@@ -5,6 +5,7 @@ A library that wraps text according to the rendered font width rather than the n
 
 [![Build Status](https://travis-ci.org/sffc/word-wrappr.svg?branch=master)](https://travis-ci.org/sffc/word-wrappr)
 [![Known Vulnerabilities](https://snyk.io/test/github/sffc/word-wrappr/badge.svg)](https://snyk.io/test/github/sffc/word-wrappr)
+[![npm version](http://img.shields.io/npm/v/word-wrappr.svg?style=flat)](https://npmjs.org/package/REPO "View this project on npm")
 
 
 ## Installation
