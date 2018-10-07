@@ -17,14 +17,14 @@
   "dependencies": {
     "async": "^2.0.1",
     "command-line-args": "^3.0.1",
-    "command-line-usage": "^3.0.3",
+    "command-line-usage": "^5.0.5",
     "dejavu-fonts-ttf": "git://github.com/vote539/dejavu-fonts-ttf.git",
     "opentype.js": "^0.6.4"
   },
   "devDependencies": {
     "eslint": "^5.6.1",
     "expect.js": "^0.3.1",
-    "mocha": "^3.0.2"
+    "mocha": "^5.2.0"
   },
   "repository": {
     "type": "git",
