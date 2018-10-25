@@ -6,3 +6,11 @@ install:
 script:
   - npm test
   - npm run lint
+deploy:
+  provider: npm
+  email: vote539@gmail.com
+  api_key:
+    secure: RJAfdYhx6+clsGuqmLRSSvapittO24+EAkoKJHEzM+ud8oBeihR1r5oCylTZpwGY04SRp9fM8OwRyYPQFnZohHfLFObwXu6/Xl+ABL5ZU2uL/BPw4fhX5jgrXdKihiEj94KcMDxP5WrzPkdAYWeCV86FaegrTvqefX9L107+Msx3EBPA1lGEpZfMOi0l5c4F5YnAK8DsgzC4tpHG1cgiUbxLiaveIQ2X6ugz34e7vujYVM9vC+K59Qn2L4UGFV3irTRURiRvj8lG6OduHeIZffWK0pQxx+9l/WrTk+4qqJ/2mFBRilsXyNqxNROzLVmY5HDISfx5tlXN43ADZIZ2b+0P+lOXr+vbEnGm2SuEL2OAA14buEszNd99wCDrvdJZtCGC4uKfPsggYyLUtVGkO34LPB/+Ob1uh9AgRurAhFt8e3nvcutqB9stJTS8GWiHCzZgwx6Noa3vxXXrVbhL1yY2BZ5lZTA+ppvretsRGIrDRasixEj8kQhpeP+msXREh1Wq3pgsw9swBoTgt0RuupVF6UpGb2/7le8P7JFZku4SUYP6Gg10N6BO451Z0kwcpBaJKjRidP7X5a0UOTgB0c1Uw1ywDP70Jugs1aThr/lcHVZDcMF2vzCuUgPn783DjoLEXs/9/Rdp8qV87+ORBm+PSnD52ml7FkOB+AYkAws=
+  on:
+    tags: true
+    repo: sffc/word-wrappr
