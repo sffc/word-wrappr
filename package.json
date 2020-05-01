@@ -5,7 +5,9 @@
   "main": "index.js",
   "scripts": {
     "lint": "eslint .",
-    "test": "mocha test/test_wrappr.js"
+    "test": "mocha test/test_wrappr.js",
+    "snyk-protect": "snyk protect",
+    "prepublish": "npm run snyk-protect"
   },
   "keywords": [
     "word",
@@ -19,7 +21,8 @@
     "command-line-args": "^3.0.1",
     "command-line-usage": "^5.0.5",
     "dejavu-fonts-ttf": "git://github.com/vote539/dejavu-fonts-ttf.git",
-    "opentype.js": "^0.6.4"
+    "opentype.js": "^0.6.4",
+    "snyk": "^1.316.1"
   },
   "devDependencies": {
     "eslint": "^5.6.1",
@@ -32,5 +35,6 @@
   },
   "bin": {
     "wrappr": "bin/cli.js"
-  }
+  },
+  "snyk": true
 }
