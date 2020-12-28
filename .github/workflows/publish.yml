@@ -19,14 +19,13 @@ jobs:
         with:
           token: ${{ secrets.NPM_AUTH_TOKEN }}
       - if: steps.publish.outputs.type != 'none'
-        name: Create tag
-        uses: actions/github-script@v3
+        name: Create GitHub Release
+        id: create_release
+        uses: actions/create-release@v1
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
-          github-token: ${{ github.token }}
-          script: |
-            github.git.createRef({
-              owner: context.repo.owner,
-              repo: context.repo.repo,
-              ref: "refs/tags/v${{ steps.publish.outputs.version }}",
-              sha: context.sha
-            })
+          tag_name: "v${{ steps.publish.outputs.version }}"
+          release_name: Release ${{ steps.publish.outputs.version }}
+          draft: true
+          prerelease: false
