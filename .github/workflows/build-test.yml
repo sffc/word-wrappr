@@ -10,8 +10,11 @@ jobs:
     - uses: actions/setup-node@v1
       with:
         node-version: 10.x
-    - run: npm ci
-    - run: npm test
+    - name: Install
+      run: npm ci
+    - name: Test
+      run: npm test
       env:
         CI: true
-    - run: npm run lint
+    - name: Lint
+      run: npm run lint
