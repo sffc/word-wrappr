@@ -1,0 +1,32 @@
+name: Publish Release
+on:
+  push:
+    branches:
+      - master
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v1
+      - uses: actions/setup-node@v1
+        with:
+          node-version: 10.x
+      - run: npm ci
+      - run: npm test
+      - uses: JS-DevTools/npm-publish@v1
+        name: Publish to npm
+        id: publish
+        with:
+          token: ${{ secrets.NPM_AUTH_TOKEN }}
+      - if: steps.publish.outputs.type != 'none'
+        name: Create tag
+        uses: actions/github-script@v3
+        with:
+          github-token: ${{ github.token }}
+          script: |
+            github.git.createRef({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              ref: "refs/tags/v" + steps.publish.outputs.version,
+              sha: context.sha
+            })
