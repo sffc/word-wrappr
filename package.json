@@ -18,13 +18,12 @@
     "async": "^3.2.0",
     "command-line-args": "^3.0.1",
     "command-line-usage": "^5.0.5",
-    "dejavu-fonts-ttf": "git://github.com/vote539/dejavu-fonts-ttf.git",
     "opentype.js": "^0.6.4"
   },
   "devDependencies": {
     "eslint": "^7.32.0",
     "expect.js": "^0.3.1",
-    "mocha": "^8.4.0"
+    "mocha": "^9.2.1"
   },
   "repository": {
     "type": "git",
